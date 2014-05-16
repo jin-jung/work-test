@@ -1,0 +1,166 @@
+{
+  "SourceName":"CSAAC_NetOP_SA_report",
+  "Version":"1.0",
+  "Prepad":"  ",
+  "DefaultFolder": "/home/jinjung/dcs/rrd_output/",
+  "ReportInfo":
+  [
+    {
+     "SrcFileName":["regex:rrd_output\.(\d+)_([A-Z0-9]+)_([A-Z0-9]+)_(Check_Bandwidth_Prod_usage).+", 1]
+     "NodeName":""
+     "Bin": 60,
+     "Delimeter":" ",
+     "Headers":
+      { 
+        "exist":1,
+        "ignore":1,
+        "HeaderInfo":
+        [
+          [ 0, "EpochTime Start of Bin", "Epoch"],
+          [ 1, "Bits in", "kb/s"],
+          [ 2, "Bits out", "kb/s"]
+        ]
+      }
+    },
+    {
+     "SrcFileName":["regex:rrd_output\.(\d+)_([A-Z0-9]+)_([A-Z0-9]+)_(Check_BBB_Proc_cpu).+", 1]
+     "NodeName":""
+     "Bin": 60,
+     "Delimeter":" ",
+     "Headers":
+      { 
+        "exist":1,
+        "ignore":1,
+        "HeaderInfo":
+        [
+          [ 0, "EpochTime Start of Bin", "Epoch"],
+          [ 1, "Sum of All process", "Avg % utilization (CPU)/(60 seconds)"],
+          [ 2, "Java", "Avg % utilization (CPU)/(60 seconds)"],
+          [3,"freeswtich","Avg % utilization (CPU)/(60 seconds)"],
+          [4,"soffice.bin","Avg % utilization (CPU)/(60 seconds)"],
+          [5,"nginx","Avg % utilization (CPU)/(60 seconds)"],
+          [6,"redis-server","Avg % utilization (CPU)/(60 seconds)"],
+          [7,"snmpd","Avg % utilization (CPU)/(60 seconds)"],
+          [8,"hipus","Avg % utilization (CPU)/(60 seconds)"],
+          [9,"nmon","Avg % utilization (CPU)/(60 seconds)"]
+        ]
+      }
+    },
+    {
+     "SrcFileName":["regex:rrd_output\.(\d+)_([A-Z0-9]+)_([A-Z0-9]+)_(Check_BBB_Proc_mem).+", 1]
+     "NodeName":""
+     "Bin": 60,
+     "Delimeter":" ",
+     "Headers":
+      { 
+        "exist":1,
+        "ignore":1,
+        "HeaderInfo":
+        [
+          [ 0, "EpochTime Start of Bin", "Epoch"],
+          [ 1, "Sum of All process", "Avg % utilization (mem)/(60 seconds)"],
+          [ 2, "Java", "Avg % utilization (mem)/(60 seconds)"],
+          [3,"freeswtich","Avg % utilization (mem)/(60 seconds)"],
+          [4,"soffice.bin","Avg % utilization (mem)/(60 seconds)"],
+          [5,"nginx","Avg % utilization (mem)/(60 seconds)"],
+          [6,"redis-server","Avg % utilization (mem)/(60 seconds)"],
+          [7,"snmpd","Avg % utilization (mem)/(60 seconds)"],
+          [8,"hipus","Avg % utilization (mem)/(60 seconds)"],
+          [9,"nmon","Avg % utilization (mem)/(60 seconds)"]
+        ]
+      }
+    },
+    {
+     "SrcFileName":["regex:rrd_output\.(\d+)_([A-Z0-9]+)_([A-Z0-9]+)_(Check_BBB_usage).+", 1]
+     "NodeName":""
+     "Bin": 60,
+     "Delimeter":" ",
+     "Headers":
+      { 
+        "exist":1,
+        "ignore":1,
+        "HeaderInfo":
+        [
+          [ 0, "EpochTime Start of Bin", "Epoch"],
+          [ 1, "Meeting", "Avg #/(60 seconds)"],
+          [ 2, "Moderator", "Avg #/(60 seconds)"],
+          [ 3, "Participants", "Avg #/(60 seconds)"]
+        ]
+      }
+    },
+    {
+     "SrcFileName":["regex:rrd_output\.(\d+)_([A-Z0-9]+)_([A-Z0-9]+)_(System_CPU_stats).+", 1]
+     "NodeName":""
+     "Bin": 60,
+     "Delimeter":" ",
+     "Headers":
+      { 
+        "exist":1,
+        "ignore":1,
+        "HeaderInfo":
+        [
+          [ 0, "EpochTime Start of Bin", "Epoch"],
+          [ 1, "User", "Avg % utilizaton /(60 seconds)"],
+          [ 2, "System", "Avg % utilization /(60 seconds)"],
+          [ 3, "Idle", "Avg % utilization /(60 seconds)"],
+          [ 4, "Waiting", "Avg % utilization /(60 seconds)"]
+        ]
+      }
+    },
+    {
+     "SrcFileName":["regex:rrd_output\.(\d+)_([A-Z0-9]+)_([A-Z0-9]+)_(Check_Nginx_Usage).+", 1]
+     "NodeName":""
+     "Bin": 60,
+     "Delimeter":" ",
+     "Headers":
+      { 
+        "exist":1,
+        "ignore":1,
+        "HeaderInfo":
+        [
+          [ 0, "EpochTime Start of Bin", "Epoch"],
+          [ 1, "Connections", "Avg #/(60 seconds)"],
+          [ 2, "Reading", "Avg #/(60 seconds)"],
+          [ 3, "Writing", "Avg #/(60 seconds)"],
+          [ 3, "Waiting", "Avg #/(60 seconds)"]
+        ]
+      }
+    },
+    {
+     "SrcFileName":["regex:rrd_output\.(\d+)_([A-Z0-9]+)_([A-Z0-9]+)_(Memory_Usage).+", 1]
+     "NodeName":""
+     "Bin": 60,
+     "Delimeter":" ",
+     "Headers":
+      { 
+        "exist":1,
+        "ignore":1,
+        "HeaderInfo":
+        [
+          [ 0, "EpochTime Start of Bin", "Epoch"],
+          [ 1, "Memory Buffers", "Avg KB#/(60 seconds)"],
+          [ 2, "Physical Memory", "Avg KB/(60 seconds)"],
+          [ 3, "Virtual Memory", "Avg KB/(60 seconds)"]
+        ]
+      }
+    },
+    {
+     "SrcFileName":["regex:rrd_output\.(\d+)_([A-Z0-9]+)_([A-Z0-9]+)_(CPU_Percent_Util).+", 1]
+     "NodeName":""
+     "Bin": 60,
+     "Delimeter":" ",
+     "Headers":
+      { 
+        "exist":1,
+        "ignore":1,
+        "HeaderInfo":
+        [
+          [ 0, "EpochTime Start of Bin", "Epoch"],
+          [ 1, "CPU percentage Utilization", "Avg % utilization/(60 seconds)"],
+        ]
+      }
+    }
+
+  ]
+
+}
